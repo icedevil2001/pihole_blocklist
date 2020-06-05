@@ -1,0 +1,6 @@
+
+bitdefender.com
+www.notion.so
+app.smartsheet.com	
+notion.so
+(\.|^)smartsheet\.com$

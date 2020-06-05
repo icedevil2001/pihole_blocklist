@@ -2,10 +2,11 @@
 import requests
 from time import sleep
 from pathlib import Path
-
+import re
 
 def readblocklist():
-	fn = 'raw_blocklist.txt'
+	p = Path(__file__).parent
+	fn = p / 'raw_blocklist.txt'
 	tmp = set()  ## remove dups
 	with open(fn) as fh:
 		for f in fh:
@@ -24,12 +25,16 @@ def page_content(url, captured_url):
 			## only for text files
 			for line in page.content.decode().strip().split():
 				line = line.strip()
+				# r = re.search(r'.*?(smartsheet|notion)', str(line) )
+				# if r:
+				# 	print("_"*50)
+				# 	print(url, line)
+				# 	print("_"*50)
 				if line.startswith('#') or line == "":
 					continue
 				else:
 					if line.startswith('<'):
 						raise ValueError('The url is a html', url)
-
 					else:
 						captured_url.add(line)
 		else:

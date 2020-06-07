@@ -112,6 +112,5 @@ https://raw.githubusercontent.com/CamelCase11/UnifiedHosts/master/hosts.all
 https://raw.githubusercontent.com/kboghdady/youTube_ads_4_pi-hole/master/black.list
 ## Porn
 https://raw.githubusercontent.com/chadmayfield/my-pihole-blocklists/master/lists/pi_blocklist_porn_all.list
-https://github.com/chadmayfield/my-pihole-blocklists/blob/master/lists/pi_blocklist_porn_top1m.list
-https://github.com/chadmayfield/my-pihole-blocklists/raw/master/lists/pi_blocklist_porn_all.list
+https://raw.githubusercontent.com/chadmayfield/my-pihole-blocklists/master/lists/pi_blocklist_porn_top1m.list
 

@@ -16,15 +16,29 @@ def readblocklist():
 			tmp.add(f)
 	return list(tmp)
 
-
-def page_content(url, captured_url):
+def load_whitelist():
+	whitelist = set()
+	p = Path(__file__).parents[1]
+	with open( p / 'whitelist' / 'pihole.whitelist.txt' ) as fh:
+		for l in fh:
+			l = l.strip()
+			whitelist.add(l)
 	
+	return list(whitelist)
+
+def page_content(url, captured_url, whitelist=load_whitelist()):
+
 	try:
 		page = requests.get(url)
 		if page.status_code == 200:
 			## only for text files
 			for line in page.content.decode().strip().split():
 				line = line.strip()
+				if line in whitelist:
+					print('_'*50)
+					print('SKIPPING', line)
+					print('_'*50)
+					continue 
 				# r = re.search(r'.*?(smartsheet|notion)', str(line) )
 				# if r:
 				# 	print("_"*50)

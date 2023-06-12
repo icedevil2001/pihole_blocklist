@@ -1,0 +1,12 @@
+ad-events.flashtalking.com
+secure-gl.imrworldwide.com
+ad-events.flashtalking.com
+metric-api.newrelic.com 
+vtrk.doubleverify.com
+tpsc-video-uw.doubleverify.com
+d9.flashtalking.com
+ade.googlesyndication.com
+nbcstreaming.sc.omtrdc.net
+pagead2.googlesyndication.com
+usw-ca2.adsrvr.org
+tv.rlcdn.com
